@@ -11,13 +11,13 @@
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"6 D:\Projekt\TalkoS\Relay_Control\Relay_Control.X\hardware.c
+"6 D:\Projekt\TalkoS\Relay_Control\03_Firmware\Relay_Control.X\hardware.c
 [v _InituC InituC `(v  1 e 1 0 ]
 "32
 [v _ButtonEvent ButtonEvent `(v  1 e 1 0 ]
 "39
 [v _ISR ISR `II(v  1 e 1 0 ]
-"29 D:\Projekt\TalkoS\Relay_Control\Relay_Control.X\main.c
+"29 D:\Projekt\TalkoS\Relay_Control\03_Firmware\Relay_Control.X\main.c
 [v _main main `(v  1 e 1 0 ]
 "218 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC10-12Fxxx_DFP/1.3.46/xc8\pic\include\proc\pic12f675.h
 [v _GPIO GPIO `VEuc  1 e 1 @5 ]
@@ -45,12 +45,12 @@
 [v _INTF INTF `VEb  1 e 0 @89 ]
 "1753
 [v _TRISIO2 TRISIO2 `VEb  1 e 0 @1066 ]
-"29 D:\Projekt\TalkoS\Relay_Control\Relay_Control.X\main.c
+"29 D:\Projekt\TalkoS\Relay_Control\03_Firmware\Relay_Control.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
 "36
 } 0
-"6 D:\Projekt\TalkoS\Relay_Control\Relay_Control.X\hardware.c
+"6 D:\Projekt\TalkoS\Relay_Control\03_Firmware\Relay_Control.X\hardware.c
 [v _InituC InituC `(v  1 e 1 0 ]
 {
 "30

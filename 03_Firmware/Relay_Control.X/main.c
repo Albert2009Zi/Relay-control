@@ -1,8 +1,8 @@
 /*
  * File:   main.c
- * Author: User
+ * Authors: Albert Ziatdinov, Alex Talko 
  *
- * Created on 9 ???? 2022 ?., 19:46
+ * Created on 27.06.2022, 19:46
  */
 
 #include <xc.h>
