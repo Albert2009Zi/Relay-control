@@ -11,28 +11,94 @@
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"6 D:\Projekt\TalkoS\Relay_Control\03_Firmware\Relay_Control.X\hardware.c
-[v _InituC InituC `(v  1 e 1 0 ]
-"32
+"6 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\pic\__eeread.c
+[v _eeprom_read eeprom_read `(uc  1 e 1 0 ]
+"6 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\pic\__eewrite.c
+[v _eeprom_write eeprom_write `(v  1 e 1 0 ]
+"5 D:\Projekt\TalkoS\Relay_Control\03_Firmware\Relay_Control.X\hardware.c
+[v _IRQConfig IRQConfig `(v  1 e 1 0 ]
+"12
 [v _ButtonEvent ButtonEvent `(v  1 e 1 0 ]
-"39
-[v _ISR ISR `II(v  1 e 1 0 ]
-"29 D:\Projekt\TalkoS\Relay_Control\03_Firmware\Relay_Control.X\main.c
-[v _main main `(v  1 e 1 0 ]
-"218 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC10-12Fxxx_DFP/1.3.46/xc8\pic\include\proc\pic12f675.h
+"19
+[v _BtnInterrupt BtnInterrupt `II(v  1 e 1 0 ]
+"28 D:\Projekt\TalkoS\Relay_Control\03_Firmware\Relay_Control.X\main.c
+[v _initUc initUc `(v  1 e 1 0 ]
+"60
+[v _main main `(i  1 e 2 0 ]
+[s S182 . 1 `uc 1 C 1 0 :1:0 
+`uc 1 DC 1 0 :1:1 
+`uc 1 Z 1 0 :1:2 
+`uc 1 nPD 1 0 :1:3 
+`uc 1 nTO 1 0 :1:4 
+`uc 1 RP 1 0 :2:5 
+`uc 1 IRP 1 0 :1:7 
+]
+"138 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC10-12Fxxx_DFP/1.3.46/xc8\pic\include\proc\pic12f675.h
+[s S190 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 RP0 1 0 :1:5 
+`uc 1 RP1 1 0 :1:6 
+]
+[s S194 . 1 `uc 1 CARRY 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 ZERO 1 0 :1:2 
+]
+[u S198 . 1 `S182 1 . 1 0 `S190 1 . 1 0 `S194 1 . 1 0 ]
+[v _STATUSbits STATUSbits `VES198  1 e 1 @3 ]
+"218
 [v _GPIO GPIO `VEuc  1 e 1 @5 ]
-"326
-[v _INTCON INTCON `VEuc  1 e 1 @11 ]
+[s S22 . 1 `uc 1 GPIF 1 0 :1:0 
+`uc 1 INTF 1 0 :1:1 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 GPIE 1 0 :1:3 
+`uc 1 INTE 1 0 :1:4 
+`uc 1 T0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"349
+[s S31 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 TMR0IE 1 0 :1:5 
+]
+[u S36 . 1 `S22 1 . 1 0 `S31 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES36  1 e 1 @11 ]
 "564
 [v _CMCON CMCON `VEuc  1 e 1 @25 ]
 "643
 [v _ADCON0 ADCON0 `VEuc  1 e 1 @31 ]
-"727
-[v _OPTION_REG OPTION_REG `VEuc  1 e 1 @129 ]
-"797
-[v _TRISIO TRISIO `VEuc  1 e 1 @133 ]
+[s S121 . 1 `uc 1 PS 1 0 :3:0 
+`uc 1 PSA 1 0 :1:3 
+`uc 1 T0SE 1 0 :1:4 
+`uc 1 T0CS 1 0 :1:5 
+`uc 1 INTEDG 1 0 :1:6 
+`uc 1 nGPPU 1 0 :1:7 
+]
+"747
+[s S128 . 1 `uc 1 PS0 1 0 :1:0 
+`uc 1 PS1 1 0 :1:1 
+`uc 1 PS2 1 0 :1:2 
+]
+[u S132 . 1 `S121 1 . 1 0 `S128 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES132  1 e 1 @129 ]
 "1208
 [v _VRCON VRCON `VEuc  1 e 1 @153 ]
+"1268
+[v _EEDATA EEDATA `VEuc  1 e 1 @154 ]
+"1306
+[v _EEADR EEADR `VEuc  1 e 1 @155 ]
+"1326
+[v _EECON1 EECON1 `VEuc  1 e 1 @156 ]
+[s S166 . 1 `uc 1 RD 1 0 :1:0 
+`uc 1 WR 1 0 :1:1 
+`uc 1 WREN 1 0 :1:2 
+`uc 1 WRERR 1 0 :1:3 
+]
+"1339
+[u S171 . 1 `S166 1 . 1 0 ]
+[v _EECON1bits EECON1bits `VES171  1 e 1 @156 ]
+"1364
+[v _EECON2 EECON2 `VEuc  1 e 1 @157 ]
 "1404
 [v _ANSEL ANSEL `VEuc  1 e 1 @159 ]
 "1585
@@ -43,25 +109,56 @@
 [v _GP5 GP5 `VEb  1 e 0 @45 ]
 "1633
 [v _INTF INTF `VEb  1 e 0 @89 ]
+"1747
+[v _TRISIO0 TRISIO0 `VEb  1 e 0 @1064 ]
 "1753
 [v _TRISIO2 TRISIO2 `VEb  1 e 0 @1066 ]
-"29 D:\Projekt\TalkoS\Relay_Control\03_Firmware\Relay_Control.X\main.c
-[v _main main `(v  1 e 1 0 ]
+"1759
+[v _TRISIO4 TRISIO4 `VEb  1 e 0 @1068 ]
+"1762
+[v _TRISIO5 TRISIO5 `VEb  1 e 0 @1069 ]
+"3 D:\Projekt\TalkoS\Relay_Control\03_Firmware\Relay_Control.X\hardware.c
+[v _stateChangeFlag stateChangeFlag `a  1 e 1 0 ]
+"60 D:\Projekt\TalkoS\Relay_Control\03_Firmware\Relay_Control.X\main.c
+[v _main main `(i  1 e 2 0 ]
 {
-"36
+"77
 } 0
-"6 D:\Projekt\TalkoS\Relay_Control\03_Firmware\Relay_Control.X\hardware.c
-[v _InituC InituC `(v  1 e 1 0 ]
+"28
+[v _initUc initUc `(v  1 e 1 0 ]
 {
-"30
+"55
 } 0
-"39
-[v _ISR ISR `II(v  1 e 1 0 ]
+"6 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\pic\__eeread.c
+[v _eeprom_read eeprom_read `(uc  1 e 1 0 ]
 {
-"46
+[v eeprom_read@addr addr `uc  1 a 1 wreg ]
+[v eeprom_read@addr addr `uc  1 a 1 wreg ]
+"9
+[v eeprom_read@addr addr `uc  1 a 1 3 ]
+"19
 } 0
-"32
+"6 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\pic\__eewrite.c
+[v _eeprom_write eeprom_write `(v  1 e 1 0 ]
+{
+[v eeprom_write@addr addr `uc  1 a 1 wreg ]
+[v eeprom_write@addr addr `uc  1 a 1 wreg ]
+[v eeprom_write@value value `uc  1 p 1 2 ]
+[v eeprom_write@addr addr `uc  1 a 1 4 ]
+"9
+} 0
+"5 D:\Projekt\TalkoS\Relay_Control\03_Firmware\Relay_Control.X\hardware.c
+[v _IRQConfig IRQConfig `(v  1 e 1 0 ]
+{
+"9
+} 0
+"19
+[v _BtnInterrupt BtnInterrupt `II(v  1 e 1 0 ]
+{
+"26
+} 0
+"12
 [v _ButtonEvent ButtonEvent `(v  1 e 1 0 ]
 {
-"37
+"17
 } 0

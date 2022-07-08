@@ -5,9 +5,9 @@ Linker command line:
 -W-3 --edf=C:\Program Files\Microchip\xc8\v2.31\pic\dat\en_msgs.txt -cn \
   -h+dist/default/production\Relay_Control.X.production.sym \
   --cmf=dist/default/production\Relay_Control.X.production.cmf -z -Q12F675 \
-  -oC:\Users\User\AppData\Local\Temp\s6hc.2 --defsym=__MPLAB_BUILD=1 \
+  -oC:\Users\User\AppData\Local\Temp\s2oc.2 --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/Relay_Control.X.production.map -E1 \
-  -ver=XC8 Compiler --acfsm=1493 -ASTACK=023h-05Dh -pstack=STACK \
+  -ver=XC8 Compiler --acfsm=1493 -ASTACK=029h-05Dh -pstack=STACK \
   -ACODE=00h-03FEh -ASTRCODE=00h-03FEh -ASTRING=00h-0FFhx3,0300h-03FEh \
   -ACONST=00h-0FFhx3,0300h-03FEh -AENTRY=00h-0FFhx3,0300h-03FEh \
   -ABANK0=020h-05Dh -ARAM=020h-05Dh -AABS1=020h-05Fh -ACOMMON=05Eh-05Fh \
@@ -16,7 +16,7 @@ Linker command line:
   -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 \
   -DENTRY=2 -preset_vec=00h,intentry=04h,init,end_init -ppowerup=CODE \
   -pcinit=CODE -pfunctab=ENTRY -posccal=03FFh -k \
-  C:\Users\User\AppData\Local\Temp\s6hc.o \
+  C:\Users\User\AppData\Local\Temp\s2oc.o \
   dist/default/production\Relay_Control.X.production.o 
 
 Object code version is 3.11
@@ -26,32 +26,39 @@ Machine type is 12F675
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\User\AppData\Local\Temp\s6hc.o
+C:\Users\User\AppData\Local\Temp\s2oc.o
                 end_init                              B        B        1        8       0
                 reset_vec                             0        0        1        0       0
                 config                             2007     2007        1        0       4
 dist/default/production\Relay_Control.X.production.o
-                cinit                                 C        C        2        8       0
+                cinit                                 C        C        4        8       0
                 intentry                              4        4        7        8       0
                 config                             2007     2007        1        0       4
-                text3                                35       35        8        8       0
-                text2                                27       27        E        8       0
-                text1                                 E        E       19        8       0
-                maintext                             3D       3D        3        8       0
-                cstackBANK0                          20       20        3       20       1
+                text6                                C8       C8        8        8       0
+                text5                                B8       B8       10        8       0
+                text4                                D0       D0        5        8       0
+                text3                                77       77       2C        8       0
+                text2                                A3       A3       15        8       0
+                text1                                47       47       30        8       0
+                maintext                             10       10       37        8       0
+                cstackBANK0                          20       20        8       20       1
+                bssBANK0                             28       28        1       20       1
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   STACK          
 
         CLASS   CODE           
                 end_init                              B        B        1         0
-                cinit                                 C        C        2         0
+                cinit                                 C        C        4         0
                 intentry                              4        4        7         0
                 reset_vec                             0        0        1         0
-                text3                                35       35        8         0
-                text2                                27       27        E         0
-                text1                                 E        E       19         0
-                maintext                             3D       3D        3         0
+                text6                                C8       C8        8         0
+                text5                                B8       B8       10         0
+                text4                                D0       D0        5         0
+                text3                                77       77       2C         0
+                text2                                A3       A3       15         0
+                text1                                47       47       30         0
+                maintext                             10       10       37         0
 
         CLASS   STRCODE        
 
@@ -62,7 +69,8 @@ TOTAL           Name                               Link     Load   Length     Sp
         CLASS   ENTRY          
 
         CLASS   BANK0          
-                cstackBANK0                          20       20        3         1
+                cstackBANK0                          20       20        8         1
+                bssBANK0                             28       28        1         1
 
         CLASS   RAM            
 
@@ -89,53 +97,62 @@ TOTAL           Name                               Link     Load   Length     Sp
 SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class     Delta
 
                 reset_vec                      000000  000001  000001         0       0  CODE        2
-                intentry                       000004  00003C  000040         8       0  CODE        2
-                cstackBANK0                    000020  000003  000023        20       1  BANK0       1
+                intentry                       000004  0000D1  0000D5         8       0  CODE        2
+                cstackBANK0                    000020  000009  000029        20       1  BANK0       1
 
 
 UNUSED ADDRESS RANGES
 
         Name                Unused          Largest block    Delta
-        BANK0            0023-005D             3B           1
+        BANK0            0029-005D             35           1
         CODE             0001-0003              3           2
-                         0040-03FE            3BF
+                         00D5-03FE            32A
         CONST            0001-0003              3           2
-                         0040-03FE            100
+                         00D5-03FE            100
         EEDATA           2100-217F             80           2
         ENTRY            0001-0003              3           2
-                         0040-03FE            100
+                         00D5-03FE            100
         IDLOC            2000-2003              4           2
-        RAM              0023-005D             3B           1
+        RAM              0029-005D             35           1
         SFR0             0000-001F             20           1
         SFR1             0080-00DD             5E           1
-        STACK            0023-005D             3B           1
+        STACK            0029-005D             35           1
         STRCODE          0001-0003              3           2
-                         0040-03FE            3BF
+                         00D5-03FE            32A
         STRING           0001-0003              3           2
-                         0040-03FE            100
+                         00D5-03FE            100
 
                                   Symbol Table
 
 _ADCON0                  (abs)        001F
 _ANSEL                   (abs)        009F
-_ButtonEvent             text3        0035
+_BtnInterrupt            text5        00B8
+_ButtonEvent             text6        00C8
 _CMCON                   (abs)        0019
+_EEADR                   (abs)        009B
+_EECON1                  (abs)        009C
+_EECON1bits              (abs)        009C
+_EECON2                  (abs)        009D
+_EEDATA                  (abs)        009A
 _GP0                     (abs)        0028
 _GP4                     (abs)        002C
 _GP5                     (abs)        002D
 _GPIO                    (abs)        0005
-_INTCON                  (abs)        000B
+_INTCONbits              (abs)        000B
 _INTF                    (abs)        0059
-_ISR                     text2        0027
-_InituC                  text1        000E
-_OPTION_REG              (abs)        0081
-_TRISIO                  (abs)        0085
+_IRQConfig               text4        00D0
+_OPTION_REGbits          (abs)        0081
+_STATUSbits              (abs)        0003
+_TRISIO0                 (abs)        0428
 _TRISIO2                 (abs)        042A
+_TRISIO4                 (abs)        042C
+_TRISIO5                 (abs)        042D
 _VRCON                   (abs)        0099
 __Habs1                  abs1         07FE
 __Hbank0                 bank0        07FE
 __Hbank1                 bank1        07FE
-__Hcinit                 cinit        000E
+__HbssBANK0              bssBANK0     07FE
+__Hcinit                 cinit        0010
 __Hclrtext               clrtext      07FE
 __Hcode                  code         07FE
 __Hcommon                common       07FE
@@ -165,6 +182,7 @@ __Htext                  text         07FE
 __Labs1                  abs1         07FE
 __Lbank0                 bank0        07FE
 __Lbank1                 bank1        07FE
+__LbssBANK0              bssBANK0     07FE
 __Lcinit                 cinit        000C
 __Lclrtext               clrtext      07FE
 __Lcode                  code         07FE
@@ -192,8 +210,8 @@ __Lspace_4               (abs)        0000
 __Lstack                 stack        0000
 __Lstrings               strings      07FE
 __Ltext                  text         07FE
-__S0                     (abs)        0040
-__S1                     (abs)        0023
+__S0                     (abs)        00D5
+__S1                     (abs)        0029
 __S2                     (abs)        0000
 __S3                     (abs)        0000
 ___int_sp                stack        0000
@@ -202,26 +220,43 @@ ___osccal_val            osccal       03FF
 ___sp                    stack        0000
 ___stackhi               (abs)        0000
 ___stacklo               (abs)        0000
-__end_of_ButtonEvent     text3        003D
-__end_of_ISR             text2        0035
-__end_of_InituC          text1        0027
-__end_of__initialization cinit        000C
-__end_of_main            maintext     0040
+__end_of_BtnInterrupt    text5        00C8
+__end_of_ButtonEvent     text6        00D0
+__end_of_IRQConfig       text4        00D5
+__end_of__initialization cinit        000E
+__end_of_eeprom_read     text2        00B8
+__end_of_eeprom_write    text3        00A3
+__end_of_initUc          text1        0077
+__end_of_main            maintext     0047
 __initialization         cinit        000C
+__pbssBANK0              bssBANK0     0028
 __pcstackBANK0           cstackBANK0  0020
 __pcstackCOMMON          cstackCOMMON 0000
 __pintentry              intentry     0004
-__pmaintext              maintext     003D
-__ptext1                 text1        000E
-__ptext2                 text2        0027
-__ptext3                 text3        0035
+__pmaintext              maintext     0010
+__ptext1                 text1        0047
+__ptext2                 text2        00A3
+__ptext3                 text3        0077
+__ptext4                 text4        00D0
+__ptext5                 text5        00B8
+__ptext6                 text6        00C8
+__size_of_BtnInterrupt   (abs)        0000
 __size_of_ButtonEvent    (abs)        0000
-__size_of_ISR            (abs)        0000
-__size_of_InituC         (abs)        0000
+__size_of_IRQConfig      (abs)        0000
+__size_of_eeprom_read    (abs)        0000
+__size_of_eeprom_write   (abs)        0000
+__size_of_initUc         (abs)        0000
 __size_of_main           (abs)        0000
-_main                    maintext     003D
+_eeprom_read             text2        00A3
+_eeprom_write            text3        0077
+_initUc                  text1        0047
+_main                    maintext     0010
+_stateChangeFlag         bssBANK0     0028
 btemp                    (abs)        005E
-end_of_initialization    cinit        000C
+eeprom_read@addr         cstackBANK0  0023
+eeprom_write@addr        cstackBANK0  0024
+eeprom_write@value       cstackBANK0  0022
+end_of_initialization    cinit        000E
 interrupt_function       intentry     0004
 intlevel0                functab      0000
 intlevel1                functab      0000
@@ -240,7 +275,38 @@ FUNCTION INFORMATION:
 
  *************** function _main *****************
  Defined at:
-		line 29 in file "main.c"
+		line 60 in file "main.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  2   45[None  ] int 
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0
+      Params:         0       0
+      Locals:         0       0
+      Temps:          0       2
+      Totals:         0       2
+Total ram usage:        2 bytes
+ Hardware stack levels required when called:    4
+ This function calls:
+		_IRQConfig
+		_eeprom_write
+		_initUc
+ This function is called by:
+		Startup code after reset
+ This function uses a non-reentrant model
+
+
+ *************** function _initUc *****************
+ Defined at:
+		line 28 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -256,24 +322,56 @@ FUNCTION INFORMATION:
  Data sizes:     COMMON   BANK0
       Params:         0       0
       Locals:         0       0
-      Temps:          0       0
-      Totals:         0       0
-Total ram usage:        0 bytes
+      Temps:          0       2
+      Totals:         0       2
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
  Hardware stack levels required when called:    3
  This function calls:
-		_InituC
+		_eeprom_read
  This function is called by:
-		Startup code after reset
+		_main
  This function uses a non-reentrant model
 
 
- *************** function _InituC *****************
+ *************** function _eeprom_read *****************
  Defined at:
-		line 6 in file "hardware.c"
+		line 6 in file "C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\pic\__eeread.c"
  Parameters:    Size  Location     Type
-		None
+  addr            1    wreg     unsigned char 
  Auto vars:     Size  Location     Type
-		None
+  addr            1    3[BANK0 ] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0
+      Params:         0       0
+      Locals:         0       1
+      Temps:          0       1
+      Totals:         0       2
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		Nothing
+ This function is called by:
+		_initUc
+ This function uses a non-reentrant model
+
+
+ *************** function _eeprom_write *****************
+ Defined at:
+		line 6 in file "C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\pic\__eewrite.c"
+ Parameters:    Size  Location     Type
+  addr            1    wreg     unsigned char 
+  value           1    2[BANK0 ] unsigned char 
+ Auto vars:     Size  Location     Type
+  addr            1    4[BANK0 ] unsigned char 
  Return value:  Size  Location     Type
                   1    wreg      void 
  Registers used:
@@ -283,11 +381,11 @@ Total ram usage:        0 bytes
 		On exit  : 
 		Unchanged: 
  Data sizes:     COMMON   BANK0
-      Params:         0       0
-      Locals:         0       0
+      Params:         0       1
+      Locals:         0       1
       Temps:          0       1
-      Totals:         0       1
-Total ram usage:        1 bytes
+      Totals:         0       3
+Total ram usage:        3 bytes
  Hardware stack levels used:    1
  Hardware stack levels required when called:    2
  This function calls:
@@ -297,9 +395,39 @@ Total ram usage:        1 bytes
  This function uses a non-reentrant model
 
 
- *************** function _ISR *****************
+ *************** function _IRQConfig *****************
  Defined at:
-		line 39 in file "hardware.c"
+		line 5 in file "hardware.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		None
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0
+      Params:         0       0
+      Locals:         0       0
+      Temps:          0       0
+      Totals:         0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		Nothing
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _BtnInterrupt *****************
+ Defined at:
+		line 19 in file "hardware.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -329,7 +457,7 @@ Total ram usage:        2 bytes
 
  *************** function _ButtonEvent *****************
  Defined at:
-		line 32 in file "hardware.c"
+		line 12 in file "hardware.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -352,7 +480,7 @@ Total ram usage:        0 bytes
  This function calls:
 		Nothing
  This function is called by:
-		_ISR
+		_BtnInterrupt
  This function uses a non-reentrant model
 
 
@@ -360,20 +488,31 @@ Total ram usage:        0 bytes
 MODULE INFORMATION
 
 Module		Function		Class		Link	Load	Size
-shared
-		__initialization		CODE           	000C	0000	1
+C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\pic\__eewrite.c
+		_eeprom_write  		CODE           	0077	0000	44
 
-shared estimated size: 1
+C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\pic\__eewrite.c estimated size: 44
+
+shared
+		__initialization		CODE           	000C	0000	2
+
+shared estimated size: 2
+
+C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\pic\__eeread.c
+		_eeprom_read   		CODE           	00A3	0000	21
+
+C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\pic\__eeread.c estimated size: 21
 
 hardware.c
-		_ISR           		CODE           	0027	0000	14
-		_ButtonEvent   		CODE           	0035	0000	8
-		_InituC        		CODE           	000E	0000	25
+		_BtnInterrupt  		CODE           	00B8	0000	16
+		_ButtonEvent   		CODE           	00C8	0000	8
+		_IRQConfig     		CODE           	00D0	0000	5
 
-hardware.c estimated size: 47
+hardware.c estimated size: 29
 
 main.c
-		_main          		CODE           	003D	0000	3
+		_main          		CODE           	0010	0000	55
+		_initUc        		CODE           	0047	0000	48
 
-main.c estimated size: 3
+main.c estimated size: 103
 
